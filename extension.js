@@ -1,5 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 const vscode = require('vscode');
+const exec = require('child_process')
+// const fs = require('fs')
 // const path_util = require('path')
 
 // this method is called when your extension is activated
@@ -31,13 +33,28 @@ async function activate(context) {
 				const pick = await vscode.window.showQuickPick(arr1)
 				for (let [x, y] of arr2) {
 					if (x == pick) {
-						// eslint-disable-next-line no-unused-vars 
-						const pathToWorkspace = y
+						const wsPath = y
+						// fetching the data from github repo and inserting it into a file
+						exec.exec(`curl -o "${wsPath.substring(1) + '/.gitignore'}" https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore`, (err, stdout, stderr) => {
+							console.log('stdout: ' + stdout);
+							console.log('stderr: ' + stderr);
+							if (err) {
+								console.log('error: ' + err);
+							}
+						});
 					}
 				}
+				// if only one workspace is opened
 			} else {
-				await vscode.window.showInformationMessage("Creating .gitignore")
-
+				const workspaces = vscode.workspace.workspaceFolders[0]
+				const wsPath = workspaces.uri.path
+				exec.exec(`curl -o "${wsPath.substring(1) + '/.gitignore'}" https://raw.githubusercontent.com/github/gitignore/main/Python.gitignore`, (err, stdout, stderr) => {
+					console.log('stdout: ' + stdout);
+					console.log('stderr: ' + stderr);
+					if (err) {
+						console.log('error: ' + err);
+					}
+				});
 			}
 
 		}
