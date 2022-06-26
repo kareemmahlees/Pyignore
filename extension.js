@@ -2,17 +2,14 @@
 const vscode = require('vscode');
 const exec = require('child_process')
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
 
 /**
  * @param {vscode.ExtensionContext} context
  */
 async function activate(context) {
 
-	// This line of code will only be executed once when your extension is activated
 
-	let disposable = vscode.commands.registerCommand('python--gitignore.generate', async function () {
+	let disposable = vscode.commands.registerCommand('pyignore.generate', async function () {
 		try {
 			const workspaces = vscode.workspace.workspaceFolders;
 			// if more than one workspace is present
