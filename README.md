@@ -12,7 +12,7 @@ Auto-Generate professoinal python .gitingnore files 🚀
 
 ## Example
 
-![](.\Doc_files\gif_vid.gif)
+![](Doc_files\gif_vid.gif)
 
 ## Warnings
 
