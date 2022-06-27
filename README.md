@@ -17,3 +17,7 @@ Auto-Generate professoinal python .gitingnore files 🚀
 ## Warnings
 
 the extension will overide any preexisting .gitignore files
+
+## Contribution
+
+feel free to contribute and create a pull request to help grow this extension 🙂
