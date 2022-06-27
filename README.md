@@ -13,6 +13,7 @@ Auto-Generate professoinal python .gitingnore files 🚀
 ## Example
 
 ![](Doc_files\gif_vid.gif)
+![gif_vid](https://user-images.githubusercontent.com/89863279/176012036-66504512-b6a8-40a7-ab1a-b471e9150fd2.gif)
 
 ## Warnings
 
