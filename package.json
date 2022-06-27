@@ -3,6 +3,8 @@
   "displayName": "Pyignore",
   "description": "generate professional python .gitignore files  ",
   "icon": "images/extension_icon.png",
+  "publisher": "KareemEbrahim",
+  "repository": {"url": "https://github.com/kareemmahlees/Pyignore"},
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.68.0"
