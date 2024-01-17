@@ -1,6 +1,6 @@
 # Pyignore
 
-Auto-Generate professoinal python .gitingnore files 🚀
+Auto-Generate professional python .gitingnore files 🚀
 
 ## Usage Instructions
 
